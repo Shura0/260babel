@@ -14,6 +14,9 @@ With the program you can:
 
 In addition it writes speed, height (barometer data) and heartrate
 
+
+Attention! For the latest version of the program please visit https://bitbucket.org/Shura0/260babel
+
 ### Short help ###
 
 ```
