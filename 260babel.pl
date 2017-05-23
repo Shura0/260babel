@@ -1009,7 +1009,7 @@ sub calc_poi($)
 		{
 			my $p={};
 			$p->{name}=substr($_->{name},0,14);
-			push $track->{pois},$p;
+			push @{$track->{pois}},$p;
 		}
 	}
 }
@@ -1077,7 +1077,7 @@ sub open_gpx_file
 					$p->{name}=$1 if (m/<name>([^<]+)<\/name>/s);
 					$p->{speed}=$1 if (m/<speed>([^<]+)<\/speed/s);
 					$p->{speed}//=10;
-					push $t->{points},$p if(defined ($p->{lon} && defined($p->{lat})));
+					push @{$t->{points}},$p if(defined ($p->{lon} && defined($p->{lat})));
 				}
 			}
 			push @TRACK,$t;
